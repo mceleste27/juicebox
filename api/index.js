@@ -4,8 +4,9 @@ const usersRouter = require('./users');
 const postsRouter = require('./posts');
 const tagsRouter = require('./tags');
 
-apiRouter.use('./users.js', usersRouter);
-apiRouter.use('./posts.js', postsRouter);
-apiRouter.use('./tags.js', tagsRouter);
+// define the path for the url, not to the file
+apiRouter.use('/users', usersRouter);
+apiRouter.use('/posts', postsRouter);
+apiRouter.use('/tags', tagsRouter);
 
 module.exports = apiRouter;
